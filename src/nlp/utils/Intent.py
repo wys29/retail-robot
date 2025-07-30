@@ -103,7 +103,7 @@ def intent_classify(querys,alternative_products,shopping_cart_products):
         意图类别：
         1. 商品寻址类（定位商品位置）
         2. 品类信息类（查询商品有什么品类）
-        3. 购物建议类（获取购买推荐）
+        3. 购物建议类（其他所有购物相关的问题）
         4. 以上都不是
 
         输出要求：
@@ -131,6 +131,7 @@ def intent_classify(querys,alternative_products,shopping_cart_products):
 
         输入: {"用户问题": "你这有果卖吗", "可选实体": ["水果","苹果","青苹果"],"购物车实体":[]}
         输出: {"intent": 2, "products": ["水果"]}  // 无实体提及，空列表
+
         '''
     
     messages = generate_messages(querys,alternative_products,shopping_cart_products,system_prompt)
